@@ -1,5 +1,6 @@
 Dado("que eu envio um GET para a API com o cep {string}") do |string|
-  @response = HTTParty.get("https://viacep.com.br/ws/07071000/json")
+  goodcep = "07071000"
+  @response = HTTParty.get("https://viacep.com.br/ws/#{goodcep}/json")
 end
 
 Quando("recebo a resposta da API") do
@@ -16,7 +17,8 @@ Então("exibo o código do IBGE") do
 end
 
 Dado("que eu envio um GET com o {string} inválido") do |string|
-  @response = HTTParty.get("https://viacep.com.br/ws/07071A00/json")
+  badcep = "07071A00"
+  @response = HTTParty.get("https://viacep.com.br/ws/#{badcep}/json")
 end
 
 Então("verifico o statuscode de falha da API") do
