@@ -20,8 +20,6 @@ Dado("que eu envio um GET com o {string} inválido") do |cep|
 end
 
 Então("verifico o statuscode de falha da API {string}") do |tipo_erro|
-  #   puts "O código de retorno é #{@response.code}"
-  #   expect(@response.code).to eq 400
   if tipo_erro.eql?("alfanumerico")
     puts "O código de retorno é #{@response.code}"
     expect(@response.code).to eq 400
@@ -31,7 +29,8 @@ Então("verifico o statuscode de falha da API {string}") do |tipo_erro|
   elsif tipo_erro.eql?("invalido")
     puts "O código de retorno é #{@response.code}"
     expect(@response.code).to eq 200
-  else tipo_erro.eql?("espaco")
+  else
     puts "O código de retorno é #{@response.code}"
-    expect(@response.code).to eq 400   end
+    expect(@response.code).to eq 400
+  end
 end
