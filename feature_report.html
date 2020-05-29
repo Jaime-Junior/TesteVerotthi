@@ -467,7 +467,7 @@ function makeRed(element_id) {
 function makeYellow(element_id) {
   $('#'+element_id).css('background', '#FAF834');
   $('#'+element_id).css('color', '#000000');
-}</script></head><body><!-- Step count 0--><div class="cucumber"><div id="cucumber-header"><div id="label"><h1>Cucumber Features</h1></div><div id="summary"><p id="totals"></p><p id="duration"></p><div id="expand-collapse"><p id="expander">Expand All</p><p id="collapser">Collapse All</p></div></div></div><div class="feature"><pre class="comment"># language: pt<br/></pre><h2><span class="val">Funcionalidade: Requisição da API</span></h2><p class="narrative">Como o usuário faz requsição à API<br/></p><div class='scenario'><span class="tag">@goodcep</span><span class="scenario_file">features/testeapi.feature:7</span><h3 id="scenario_1"><span class="keyword">Cenario:</span> <span class="val">Requisição CEP</span></h3><ol><li id='' class='step passed'><div class="step_name"><span class="keyword">Dado </span><span class="step val">que eu envio um GET para a API com o cep <span class="param">&quot;07071000&quot;</span></span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:1</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step passed'><div class="step_name"><span class="keyword">Quando </span><span class="step val">recebo a resposta da API</span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:5</span></div></li><li class="step message">{
+}</script></head><body><!-- Step count 0--><div class="cucumber"><div id="cucumber-header"><div id="label"><h1>Cucumber Features</h1></div><div id="summary"><p id="totals"></p><p id="duration"></p><div id="expand-collapse"><p id="expander">Expand All</p><p id="collapser">Collapse All</p></div></div></div><div class="feature"><pre class="comment"># language: pt<br/># force_encoding("UTF-8")<br/># force_encoding(Encoding::UTF_8)<br/></pre><h2><span class="val">Funcionalidade: Requisição da API</span></h2><p class="narrative">Como o usuário faz requsição à API<br/></p><div class='scenario'><span class="tag">@goodcep</span><span class="scenario_file">features/testeapi.feature:9</span><h3 id="scenario_1"><span class="keyword">Cenário:</span> <span class="val">CEP válido</span></h3><ol><li id='' class='step passed'><div class="step_name"><span class="keyword">Dado </span><span class="step val">que eu envio um GET para a API com o cep <span class="param">&quot;07071000&quot;</span></span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:1</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step passed'><div class="step_name"><span class="keyword">Quando </span><span class="step val">recebo a resposta da API</span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:5</span></div></li><li class="step message">{
   "cep": "07071-000",
   "logradouro": "Rua Santo Antônio",
   "complemento": "",
@@ -477,7 +477,7 @@ function makeYellow(element_id) {
   "unidade": "",
   "ibge": "3518800",
   "gia": "3360"
-}</li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step passed'><div class="step_name"><span class="keyword">Então </span><span class="step val">verifico o statuscode de sucesso da API</span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:9</span></div></li><li class="step message">O código de retorno é 200</li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step passed'><div class="step_name"><span class="keyword">E </span><span class="step val">exibo o código do IBGE</span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:14</span></div></li><li class="step message">O código do IBGE é 3518800</li> <script type="text/javascript">moveProgressBar('100.0');</script></ol></div><div class='scenario'><span class="tag">@badcep</span><span class="scenario_file">features/testeapi.feature:14</span><h3 id="scenario_2"><span class="keyword">Cenario:</span> <span class="val">CEP inválido</span></h3><ol><li id='' class='step passed'><div class="step_name"><span class="keyword">Dado </span><span class="step val">que eu envio um GET com o <span class="param">&quot;07071A00&quot;</span> inválido</span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:18</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step passed'><div class="step_name"><span class="keyword">Quando </span><span class="step val">recebo a resposta da API</span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:5</span></div></li><li class="step message"><!DOCTYPE HTML>
+}</li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step passed'><div class="step_name"><span class="keyword">Então </span><span class="step val">verifico o statuscode de sucesso da API</span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:9</span></div></li><li class="step message">O código de retorno é 200</li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step passed'><div class="step_name"><span class="keyword">E </span><span class="step val">exibo o código do IBGE</span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:14</span></div></li><li class="step message">O código do IBGE é 3518800</li> <script type="text/javascript">moveProgressBar('100.0');</script></ol></div><div class='scenario outline'><span class="tag">@badcep</span><span class="scenario_file">features/testeapi.feature:16</span><h3 id="scenario_2"><span class="keyword">Esquema do Cenário:</span> <span class="val">CEP inválido</span></h3><ol><li id='' class='step skipped'><div class="step_name"><span class="keyword">Dado </span><span class="step val">que eu envio um GET com o &quot;&lt;cep&gt;&quot; inválido</span></div><div class="step_file"><span>features/testeapi.feature:17</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step skipped'><div class="step_name"><span class="keyword">Quando </span><span class="step val">recebo a resposta da API</span></div><div class="step_file"><span>features/testeapi.feature:18</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step skipped'><div class="step_name"><span class="keyword">Então </span><span class="step val">verifico o statuscode de falha da API &quot;&lt;tipo_erro&gt;&quot;</span></div><div class="step_file"><span>features/testeapi.feature:19</span></div></li> <script type="text/javascript">moveProgressBar('100.0');</script></ol><div class="examples"><h4><span class="keyword">Exemplos</span> <span class="val"></span></h4><table><tr class='step' id='features_testeapi_feature_22'><th id="features_testeapi_feature_22_0" class="step skipped_param"><div><span class="step param">cep</span></div></th><th id="features_testeapi_feature_22_1" class="step skipped_param"><div><span class="step param">tipo_erro</span></div></th></tr> <script type="text/javascript">moveProgressBar('100.0');</script><tr class='step' id='features_testeapi_feature_23'><td id="features_testeapi_feature_23_0" class="step passed"><div><span class="step param">07071A00</span></div></td><td id="features_testeapi_feature_23_1" class="step passed"><div><span class="step param">alfanumerico</span></div></td><td class="message"><!DOCTYPE HTML>
 <html lang="pt-br">
 
 <head>
@@ -507,4 +507,66 @@ function makeYellow(element_id) {
 </body>
 
 </html>
-</li> <script type="text/javascript">moveProgressBar('100.0');</script><li id='' class='step passed'><div class="step_name"><span class="keyword">Então </span><span class="step val">verifico o statuscode de falha da API</span></div><div class="step_file"><span>features/step_definitions/cep_step.rb:22</span></div></li><li class="step message">O código de retorno é 400</li> <script type="text/javascript">moveProgressBar('100.0');</script></ol></div></div><script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0m1.201s seconds</strong>";</script><script type="text/javascript">document.getElementById('totals').innerHTML = "2 scenarios (2 passed)<br />7 steps (7 passed)";</script></div></body></html>
+, O código de retorno é 400</td></tr> <script type="text/javascript">moveProgressBar('100.0');</script><tr class='step' id='features_testeapi_feature_24'><td id="features_testeapi_feature_24_0" class="step passed"><div><span class="step param">070710000</span></div></td><td id="features_testeapi_feature_24_1" class="step passed"><div><span class="step param">carac_extra</span></div></td><td class="message"><!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+  <title>ViaCEP 400</title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+      h1 {
+          color: #666;
+          text-align: center;
+          font-size: 4em;
+      }
+      h2, h3 {
+          color: #777;
+          text-align: center;
+          font-size: 3em;
+      }
+      h3 {
+          font-size: 1.5em;
+      }
+  </style>
+</head>
+
+<body>
+    <h1>Erro 400</h1>
+    <h2>Ops!</h2>
+    <h3>Verifique a sua URL (Bad Request)</h3>
+</body>
+
+</html>
+, O código de retorno é 400</td></tr> <script type="text/javascript">moveProgressBar('100.0');</script><tr class='step' id='features_testeapi_feature_25'><td id="features_testeapi_feature_25_0" class="step passed"><div><span class="step param">99999999</span></div></td><td id="features_testeapi_feature_25_1" class="step passed"><div><span class="step param">invalido</span></div></td><td class="message">{
+  "erro": true
+}, O código de retorno é 200</td></tr> <script type="text/javascript">moveProgressBar('100.0');</script><tr class='step' id='features_testeapi_feature_26'><td id="features_testeapi_feature_26_0" class="step passed"><div><span class="step param">07071%2000</span></div></td><td id="features_testeapi_feature_26_1" class="step passed"><div><span class="step param">espaco</span></div></td><td class="message"><!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+  <title>ViaCEP 400</title>
+  <meta charset="utf-8" />
+  <style type="text/css">
+      h1 {
+          color: #666;
+          text-align: center;
+          font-size: 4em;
+      }
+      h2, h3 {
+          color: #777;
+          text-align: center;
+          font-size: 3em;
+      }
+      h3 {
+          font-size: 1.5em;
+      }
+  </style>
+</head>
+
+<body>
+    <h1>Erro 400</h1>
+    <h2>Ops!</h2>
+    <h3>Verifique a sua URL (Bad Request)</h3>
+</body>
+
+</html>
+, O código de retorno é 400</td></tr> <script type="text/javascript">moveProgressBar('100.0');</script></table></div></div></div><script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0m3.031s seconds</strong>";</script><script type="text/javascript">document.getElementById('totals').innerHTML = "5 scenarios (5 passed)<br />16 steps (16 passed)";</script></div></body></html>

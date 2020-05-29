@@ -15,11 +15,23 @@ Então("exibo o código do IBGE") do
   puts "O código do IBGE é #{@response["ibge"]}"
 end
 
-Dado("que eu envio um GET com o {string} inválido") do |cepinvalido|
-  @response = HTTParty.get("https://viacep.com.br/ws/#{cepinvalido}/json")
+Dado("que eu envio um GET com o {string} inválido") do |cep|
+  @response = HTTParty.get("https://viacep.com.br/ws/#{cep}/json")
 end
 
-Então("verifico o statuscode de falha da API") do
-  puts "O código de retorno é #{@response.code}"
-  expect(@response.code).to eq 400
+Então("verifico o statuscode de falha da API {string}") do |tipo_erro|
+  #   puts "O código de retorno é #{@response.code}"
+  #   expect(@response.code).to eq 400
+  if tipo_erro.eql?("alfanumerico")
+    puts "O código de retorno é #{@response.code}"
+    expect(@response.code).to eq 400
+  elsif tipo_erro.eql?("carac_extra")
+    puts "O código de retorno é #{@response.code}"
+    expect(@response.code).to eq 400
+  elsif tipo_erro.eql?("invalido")
+    puts "O código de retorno é #{@response.code}"
+    expect(@response.code).to eq 200
+  else tipo_erro.eql?("espaco")
+    puts "O código de retorno é #{@response.code}"
+    expect(@response.code).to eq 400   end
 end
